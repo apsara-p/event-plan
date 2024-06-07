@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 1em;
+        }
+        section {
+            margin-bottom: 2em;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .event-details, .schedule, .registration {
+            border: 1px solid #ddd;
+            padding: 1em;
+            border-radius: 5px;
+        }
+        .registration form {
+            display: flex;
+            flex-direction: column;
+        }
+        .registration label {
+            margin-bottom: 0.5em;
+        }
+        .registration input, .registration textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .registration button {
+            padding: 0.5em;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .registration button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Event Planning</h1>
+    </header>
+    <main>
+        <section class="event-details">
+            <h2>Event Details</h2>
+            <p><strong>Date:</strong> June 20, 2024</p>
+            <p><strong>Location:</strong> Main Auditorium, City Center</p>
+            <p><strong>Description:</strong> Join us for a day of insightful talks, networking opportunities, and workshops designed to help you excel in your field.</p>
+        </section>
+
+        <section class="schedule">
+            <h2>Schedule</h2>
+            <ul>
+                <li><strong>10:00 AM:</strong> Registration and Coffee</li>
+                <li><strong>11:00 AM:</strong> Opening Keynote</li>
+                <li><strong>12:30 PM:</strong> Lunch Break</li>
+                <li><strong>2:00 PM:</strong> Workshop Session 1</li>
+                <li><strong>3:30 PM:</strong> Workshop Session 2</li>
+                <li><strong>5:00 PM:</strong> Networking Hour</li>
+            </ul>
+        </section>
+
+        <section class="registration">
+            <h2>Registration</h2>
+            <form action="/submit_registration" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Additional Message:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
